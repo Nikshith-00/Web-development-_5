@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App | Nikshith Jampala</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <div class="background-shape shape-one"></div>
+    <div class="background-shape shape-two"></div>
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-icon">☁</div>
+        <div>
+          <h1>Weather<span>Now</span></h1>
+          <p>Live weather dashboard</p>
+        </div>
+      </div>
+      <button id="locationBtn" class="location-btn" title="Use my current location">⌖ <span>My Location</span></button>
+    </header>
+
+    <section class="search-area">
+      <div class="search-box">
+        <span>⌕</span>
+        <input id="cityInput" type="text" placeholder="Search city, e.g. Hyderabad" autocomplete="off">
+        <button id="searchBtn">Search</button>
+      </div>
+      <p class="hint">Search any city worldwide or use your current location.</p>
+    </section>
+
+    <div id="status" class="status" aria-live="polite"></div>
+
+    <section id="weatherCard" class="weather-card hidden">
+      <div class="weather-main">
+        <div>
+          <p id="dateText" class="date"></p>
+          <h2 id="cityName">--</h2>
+          <p id="countryName" class="country">--</p>
+        </div>
+        <div id="weatherIcon" class="weather-icon">☀️</div>
+      </div>
+
+      <div class="temperature-row">
+        <div>
+          <span id="temperature" class="temperature">--</span><span class="degree">°C</span>
+          <p id="description" class="description">--</p>
+        </div>
+        <div class="feels">
+          Feels like <strong id="feelsLike">--°C</strong>
+        </div>
+      </div>
+
+      <div class="details-grid">
+        <div class="detail">
+          <span class="detail-icon">💧</span>
+          <div><small>Humidity</small><strong id="humidity">--%</strong></div>
+        </div>
+        <div class="detail">
+          <span class="detail-icon">💨</span>
+          <div><small>Wind Speed</small><strong id="wind">-- km/h</strong></div>
+        </div>
+        <div class="detail">
+          <span class="detail-icon">🌡️</span>
+          <div><small>Pressure</small><strong id="pressure">-- hPa</strong></div>
+        </div>
+        <div class="detail">
+          <span class="detail-icon">☁️</span>
+          <div><small>Cloud Cover</small><strong id="cloud">--%</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="welcome" class="welcome">
+      <div class="welcome-icon">🌤️</div>
+      <h2>Check the weather anywhere</h2>
+      <p>Enter a city name above to get current temperature, conditions, humidity, wind and more.</p>
+    </section>
+
+    <footer>
+      <p>Built with HTML, CSS & JavaScript • <strong>Nikshith Jampala</strong></p>
+      <p>Weather data by Open-Meteo</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
